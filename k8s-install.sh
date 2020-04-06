@@ -191,7 +191,7 @@ Installed:
 
 * Install Flannel
 
-    kubectl apply -f lib/kube-flannel.yml
+    kubectl apply -f lib/kube-flannel-v0.12.0/kube-flannel.yml
 
 * Tear-down and Clean Up Kubernetes
 

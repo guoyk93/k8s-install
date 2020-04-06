@@ -1,0 +1,8 @@
+image:
+  repository: registry.cn-beijing.aliyuncs.com/landzero-k8s/cert-manager-controller
+webhook:
+  image:
+    repository: registry.cn-beijing.aliyuncs.com/landzero-k8s/cert-manager-webhook
+cainjector:
+  image:
+    repository: registry.cn-beijing.aliyuncs.com/landzero-k8s/cert-manager-cainjector
