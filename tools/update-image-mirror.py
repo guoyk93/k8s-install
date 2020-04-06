@@ -11,6 +11,9 @@ image_names = (
     'k8s.gcr.io/etcd:3.4.3-0',
     'k8s.gcr.io/coredns:1.6.5',
     'quay.io/coreos/flannel:v0.12.0-amd64',
+    'quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.30.0',
+    'jettech/kube-webhook-certgen:v1.0.0',
+    'k8s.gcr.io/defaultbackend-amd64:1.5',
 )
 
 registry = 'registry.cn-beijing.aliyuncs.com/landzero-k8s'
