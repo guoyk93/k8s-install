@@ -14,6 +14,9 @@ image_names = (
     'quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.30.0',
     'jettech/kube-webhook-certgen:v1.0.0',
     'k8s.gcr.io/defaultbackend-amd64:1.5',
+    'quay.io/jetstack/cert-manager-controller:v0.14.1',
+    'quay.io/jetstack/cert-manager-webhook:v0.14.1',
+    'quay.io/jetstack/cert-manager-cainjector:v0.14.1',
 )
 
 registry = 'registry.cn-beijing.aliyuncs.com/landzero-k8s'
