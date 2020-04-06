@@ -1,0 +1,42 @@
+# see https://godoc.org/k8s.io/kubernetes/cmd/kubeadm/app/apis/kubeadm/v1beta2
+
+apiVersion: kubeadm.k8s.io/v1beta2
+kind: ClusterConfiguration
+clusterName: kubernetes
+imageRepository: registry.cn-beijing.aliyuncs.com/landzero-k8s
+kubernetesVersion: v1.17.4
+certificatesDir: /etc/kubernetes/pki
+
+# for HA mode
+#controlPlaneEndpoint: "10.100.0.1:6443"
+
+apiServer:
+  extraArgs:
+    authorization-mode: Node,RBAC
+  timeoutForControlPlane: 4m0s
+  # certificate SANs for public access
+  #certSANs:
+  #  - "10.100.1.1"
+  #  - "ec2-10-100-0-1.compute-1.amazonaws.com"
+
+controllerManager: {}
+
+kubeProxy:
+  config:
+    mode: ipvs
+
+dns:
+  type: CoreDNS
+
+etcd:
+  local:
+    dataDir: /var/lib/etcd
+
+networking:
+  dnsDomain: cluster.local
+  # adjusted for Flannel
+  podSubnet: 10.244.0.0/16
+  # adjusted for Flannel
+  serviceSubnet: 10.243.0.0/16
+
+scheduler: {}
